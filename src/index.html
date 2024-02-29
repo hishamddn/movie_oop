@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CRUD App</title>
+    <script src="fetchapi.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+    <nav>
+      <h4>Movies</h4>
+      <h4>TV shows</h4>
+      <h4>People</h4>
+    </nav>
+
+    <div class="formbox1">
+      <input type="text" 
+      id="SearchData"
+      placeholder="Search Title Name">
+
+      <button onclick="buttonClicked()">SEARCH</button>
+    </div>
+    <div class="attribute">
+      <img id="Poster" style="margin-top: 50px; width: 300px;">x
+    </div>
+    <div class="attribute">
+      <h1 id="Title""></h1>
+    </div>
+    <div class="attribute">
+      <label style="margin-top: 21px;">Year: </label>
+      <h4 id="Year"></h4>
+    </div>
+    <div class="attribute">
+      <label style="margin-top: 21px;">Genre: </label>
+      <h4 id="Genre"></h4>
+    </div>
+    <div class="attribute">
+      <label style="margin-top: 21px;">Director: </label>
+      <h4 id="Director"></h4>
+    </div>
+    <div class="attribute">
+      <label style="margin-top: 21px;">Actors: </label>
+      <h4 id="Actors"></h4>
+    </div>
+    <div class="attribute">
+      <label style="margin-top: 21px;">Plot: </label>
+      <h4 id="Plot"></h4>
+    </div>
+    <div class="attribute">
+      <label style="margin-top: 21px;">Ratings: </label>
+      <h4 id="Ratings"></h4>
+    </div>
+    <div class="attribute">
+      <label style="margin-top: 21px;">Awards: </label>
+      <h4 id="Awards"></h4>
+    </div>
+    <div class="attribute">
+      <label style="margin-top: 21px;">Writer: </label>
+      <h4 id="Writer"></h4>
+    </div>
+    <iframe id="Trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+  </body>
+</html>
