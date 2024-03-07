@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CRUD App</title>
+	<script src="fetchapi.js"></script>
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  
+  <body>
+
+    <label class="label">
+		<input type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+		<div class="sidebar">
+			<header>
+            </header>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="movie.html">Movies</a></li>
+                <li><a href="tv show.html">Tv shows</a></li>
+            </ul>
+        </div>
+	</label>
+
+    <nav>
+		<div class="formbox2">
+            <h4><a href="index.html" style="text-decoration: none; color: white;">Home</a></h4>
+			<h4><a href="movie.html" style="text-decoration: none; color: white;">Movies</a></h4>
+			<h4><a href="tv show.html" style="text-decoration: none; color: white;">Tv shows</a></h4>
+		</div>
+		<div class="formbox1">
+			<input type="text" 
+			id="SearchMovie"
+			placeholder="Search Title Name">
+
+			<button onclick="buttonClicked()">SEARCH</button>
+		</div>
+	</nav>
+
+
+	<div class="container">
+		<div class="col11">
+			<div class="attribute">
+				<img id="Poster" style="margin-top: 50px; width: 400px; border-radius: 5%;">
+			</div>
+		</div>
+
+		<div class="col2">
+			<div class="attribute">
+				<h1 id="Title" style="margin-top: 70px;"></h1>
+			</div>  
+			<div class="attribute">
+				<label style="margin-top: 21px;">Year: </label>
+				<p id="Year" style="margin-top: 21px;"></p>
+			</div>
+			<div class="attribute">
+				<label style="margin-top: 21px;">Genre: </label>
+				<p id="Genre" style="margin-top: 21px;"></p>
+			</div>
+			<div class="attribute">
+				<label style="margin-top: 21px;">Director: </label>
+				<p id="Director" style="margin-top: 21px;"></p>
+			</div>
+			<div class="attribute">
+				<label style="margin-top: 21px;">Actors: </label>
+				<p id="Actors" style="margin-top: 21px;"></p>
+			</div>
+			<div class="attribute">
+				<label style="margin-top: 21px;">Plot: </label>
+				<p id="Plot" style="margin-top: 21px;"></p>
+			</div>
+			<div class="attribute">
+				<label style="margin-top: 21px;">Ratings: </label>
+				<p id="Ratings" style="margin-top: 21px;"></p>
+			</div>
+			<div class="attribute">
+				<label style="margin-top: 21px;">Awards: </label>
+				<p id="Awards" style="margin-top: 21px;"></p>
+			</div>
+			<div class="attribute">
+				<label style="margin-top: 21px;">Writer: </label>
+				<p id="Writer" style="margin-top: 21px;"></p>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="review-container">
+		<div class="contact-left" style="color: white; margin-bottom: 20px;">
+			<center>
+			<h1>Review This Application</h1>
+			<div class="formbox1">
+				<button style="margin: auto;"><a href="review.html" style="text-decoration: none; color: black;">Review</a></button>
+			</div>
+			<p>mohdhishamuddin@example.com</p>
+			<p>013-123456789</p>
+			<div class="social-icon" style="background-color: white; width: fit-content; border-radius: 10px; padding: 10px;">
+				<a href="https://www.facebook.com/profile.php?id=100010659311900"><img src="facebook.png" alt="" style="width: 30px;"></a>
+				<a href="https://www.instagram.com/hishamddn_/"><img src="instagram.png" alt="" style="width: 30px;"></a>
+				<a href="https://twitter.com/?lang=en"><img src="twitter.png" alt="" style="width: 30px;"></a>
+			</div>
+		</center>
+		</div>  
+	</div>
+	
+    <iframe id="Trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+  </body>
+</html>

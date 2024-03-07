@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <style>
+        #movie1, #movie{
+        width: 300px;
+        padding: 5px;
+        }
+        #movie1 img, #movie img{
+        width: 100%;
+        margin-top: 100px; 
+        height: 70%;
+        border-radius: 5%;
+        }
+        #movie1 p{
+        color: white;
+        }
+    </style>
 
 	<label class="label">
 		<input type="checkbox">
@@ -41,20 +56,12 @@
 		</div>
 	</nav>
 
-	
-	<div class="text-overlay">
-		<h1>Welcome.</h1>
-		<h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
-	</div>
 
-	<div class="col1">
-		<div class="overlay"></div>
-		<img src="spiderman.jpeg" style="width: 100%; z-index: 1; margin-top: 50px;">
-	</div>
 
-	<center>
-	<div class="slider">
-		<h2 style="position: absolute; margin-top: 60px; color: white; margin-left: 10px;">Top Picks</h2>
+    <center>
+        <h1 style="padding-top: 100px;">Movies</h1>
+    </center>
+    <div class="slider2">
 		<div id="movie" onclick="redirectToMovieDetail('My Name is Loh Kiwan')">
 			<img id="Poster1">
 			<p id="Title1"><p>
@@ -74,105 +81,79 @@
 			<img id="Poster4" onclick="redirectToMovieDetail('The Forgotten Battle')">
 			<p id="Title4"></p>
 		</div>
-	
-		<div id="movie">
-			<img id="Poster5" onclick="redirectToMovieDetail('The Girl with the Dragon Tattoo')">
-			<p id="Title5"></p>
-		</div>
-	
-		<div id="movie">
-			<img id="Poster6" onclick="redirectToMovieDetail('The Wall')">
-			<p id="Title6"></p>
-		</div>
-	
-		<div id="movie">
-			<img id="Poster7" onclick="redirectToMovieDetail('Deepwater Horizon')">
-			<p id="Title7"></p>
-		</div>
-	</div>
-	</center>
+    </div>
 
-	<center>
-	<div class="slider">
-		<h2 style="position: absolute; margin-top: 60px; color: white; margin-left: 10px;">Popular</h2>
-		<div id="movie">
+	
+
+    <div class="slider2">
+        <div id="movie1">
+            <img id="Poster5" onclick="redirectToMovieDetail('The Girl with the Dragon Tattoo')">
+            <p id="Title5"></p>
+        </div>
+    
+        <div id="movie1">
+            <img id="Poster6" onclick="redirectToMovieDetail('The Wall')">
+            <p id="Title6"></p>
+        </div>
+    
+        <div id="movie1">
+            <img id="Poster7" onclick="redirectToMovieDetail('Deepwater Horizon')">
+            <p id="Title7"></p>
+        </div>
+
+        <div id="movie">
+			<img id="Poster444" onclick="redirectToMovieDetail('Hunter Killer')">
+			<p id="Title444"></p>
+		</div>
+    </div>
+
+    <div class="slider2">
+        <div id="movie1">
 			<img id="Poster11" onclick="redirectToMovieDetail('Imaginur')">
 			<p id="Title11"><p>
 		</div>
 	
-		<div id="movie">
+		<div id="movie1">
 			<img id="Poster22" onclick="redirectToMovieDetail('Spaceman')">
 			<p id="Title22"></p>
 		</div>
 	
-		<div id="movie">
+		<div id="movie1">
 			<img id="Poster33" onclick="redirectToMovieDetail('Thanksgiving')">
 			<p id="Title33"></p>
 		</div>
 	
-		<div id="movie">
+		<div id="movie1">
 			<img id="Poster44" onclick="redirectToMovieDetail('The Last Airbender')">
 			<p id="Title44"></p>
 		</div>
-	
-		<div id="movie">
-			<img id="Poster55" onclick="redirectToMovieDetail('Oppenheimer')">
-			<p id="Title55"></p>
+    </div>
+
+    <div class="slider2">
+        <div id="movie">
+			<img id="Poster555" onclick="redirectToMovieDetail('American Sniper')">
+			<p id="Title555"></p>
 		</div>
 	
 		<div id="movie">
-			<img id="Poster66" onclick="redirectToMovieDetail('KKN di Desa Penari')">
-			<p id="Title66"></p>
+			<img id="Poster666" onclick="redirectToMovieDetail('The Contractor')">
+			<p id="Title666"></p>
+		</div>
+	
+		<div id="movie">
+			<img id="Poster777" onclick="redirectToMovieDetail('Extraction')">
+			<p id="Title777"></p>
 		</div>
 	
 		<div id="movie">
 			<img id="Poster77" onclick="redirectToMovieDetail('Wonka')">
 			<p id="Title77"></p>
 		</div>
-	</div>
-	</center>
+    </div>
 
-	<center>
-	<div class="slider">
-		<h2 style="position: absolute; margin-top: 60px; color: white; margin-left: 10px;">Action</h2>
-		<div id="movie">
-			<img id="Poster112" onclick="redirectToMovieDetail('American Assassin')">
-			<p id="Title112"><p>
-		</div>
-	
-		<div id="movie">
-			<img id="Poster113" onclick="redirectToMovieDetail('The Umbrella Academy')">
-			<p id="Title113"></p>
-		</div>
-	
-		<div id="movie">
-			<img id="Poster114" onclick="redirectToMovieDetail('Greyhound')">
-			<p id="Title114"></p>
-		</div>
-	
-		<div id="movie">
-			<img id="Poster115" onclick="redirectToMovieDetail('Hunter Killer')">
-			<p id="Title115"></p>
-		</div>
-	
-		<div id="movie">
-			<img id="Poster116" onclick="redirectToMovieDetail('American Sniper')">
-			<p id="Title116"></p>
-		</div>
-	
-		<div id="movie">
-			<img id="Poster117" onclick="redirectToMovieDetail('The Contractor')">
-			<p id="Title117"></p>
-		</div>
-	
-		<div id="movie">
-			<img id="Poster118" onclick="redirectToMovieDetail('Extraction')">
-			<p id="Title118"></p>
-		</div>
-	</div>
-	</center>
+
+
     
-
     <iframe id="Trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
   </body>
 </html>

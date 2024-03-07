@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CRUD App</title>
+	<script src="home.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+	<label class="label">
+		<input type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+		<div class="sidebar">
+			<header>
+            </header>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="movie.html">Movies</a></li>
+                <li><a href="tv show.html">Tv shows</a></li>
+            </ul>
+        </div>
+	</label>
+
+    <nav>
+		<div class="formbox2">
+			<h4><a href="index.html" style="text-decoration: none; color: white;">Home</a></h4>
+			<h4><a href="movie.html" style="text-decoration: none; color: white;">Movies</a></h4>
+			<h4><a href="tv show.html" style="text-decoration: none; color: white;">Tv shows</a></h4>
+		</div>
+		<div class="formbox1">
+			<input type="text" 
+			id="SearchMovie"
+			placeholder="Search Title Name">
+
+			<button onclick="buttonClicked()">SEARCH</button>
+		</div>
+	</nav>
+
+    <center>
+        <h1 style="padding-top: 100px;">TV shows</h1>
+    </center>
+    <center>
+        <div class="slider" style="margin-top: 40px;">
+            <h2 style="position: absolute; margin-top: 60px; color: white; margin-left: 10px;">Top Picks</h2>
+            <div id="movie" onclick="redirectToMovieDetail('The Boys')">
+                <img id="Poster111">
+                <p id="Title111"><p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster222" onclick="redirectToMovieDetail('The Umbrella Academy')">
+                <p id="Title222"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster333" onclick="redirectToMovieDetail('Destined With You')">
+                <p id="Title333"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster444" onclick="redirectToMovieDetail('Extracurricular')">
+                <p id="Title444"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster555" onclick="redirectToMovieDetail('Silo')">
+                <p id="Title555"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster666" onclick="redirectToMovieDetail('Twenty-Five Twenty-One')">
+                <p id="Title666"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster777" onclick="redirectToMovieDetail('18 Again')">
+                <p id="Title777"></p>
+            </div>
+        </div>
+    </center>
+
+    <center>
+        <div class="slider">
+            <h2 style="position: absolute; margin-top: 60px; color: white; margin-left: 10px;">For You</h2>
+            <div id="movie" onclick="redirectToMovieDetail('True Beauty')">
+                <img id="Poster12">
+                <p id="Title12"><p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster13" onclick="redirectToMovieDetail('All of Us Are Dead')">
+                <p id="Title13"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster14" onclick="redirectToMovieDetail('The Flash')">
+                <p id="Title14"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster15" onclick="redirectToMovieDetail('Squid Game')">
+                <p id="Title15"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster16" onclick="redirectToMovieDetail('Avatar: The Last Airbender')">
+                <p id="Title16"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster17" onclick="redirectToMovieDetail('Vincenzo')">
+                <p id="Title17"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster18" onclick="redirectToMovieDetail('Alice in Borderland')">
+                <p id="Title18"></p>
+            </div>
+        </div>
+    </center>
+
+    <center>
+        <div class="slider">
+            <h2 style="position: absolute; margin-top: 60px; color: white; margin-left: 10px;">Action shows</h2>
+            <div id="movie" onclick="redirectToMovieDetail('Bloodhounds')">
+                <img id="Poster21">
+                <p id="Title21"><p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster23" onclick="redirectToMovieDetail('Vagabond')">
+                <p id="Title23"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster24" onclick="redirectToMovieDetail('Vincenzo')">
+                <p id="Title24"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster25" onclick="redirectToMovieDetail('Memories of the Alhambra')">
+                <p id="Title25"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster26" onclick="redirectToMovieDetail('The Uncanny Counter')">
+                <p id="Title26"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster27" onclick="redirectToMovieDetail('Squid Game')">
+                <p id="Title27"></p>
+            </div>
+        
+            <div id="movie">
+                <img id="Poster28" onclick="redirectToMovieDetail('The Terminal List')">
+                <p id="Title28"></p>
+            </div>
+        </div>
+    </center>
+
+
+    
+    <iframe id="Trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+  </body>
+</html>

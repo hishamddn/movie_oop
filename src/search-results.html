@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label class="label">
+		<input type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+		<div class="sidebar">
+			<header>
+            </header>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="movie.html">Movies</a></li>
+                <li><a href="tv show.html">Tv shows</a></li>
+            </ul>
+        </div>
+	</label>
+    <nav>
+		<div class="formbox2">
+			<h4><a href="index.html" style="text-decoration: none; color: white;">Home</a></h4>
+			<h4><a href="movie.html" style="text-decoration: none; color: white;">Movies</a></h4>
+			<h4><a href="tv show.html" style="text-decoration: none; color: white;">Tv shows</a></h4>
+		</div>
+		<div class="formbox1">
+			<input type="text" 
+			id="SearchMovie"
+			placeholder="Search Title Name">
+
+			<button onclick="buttonClicked()">SEARCH</button>
+		</div>
+	</nav>
+
+    <h2 id="message" style="margin-top: 100px;"></h2>
+    <div id="movie2">
+        <img id="Poster">
+        <h3 id="Title"></h3>
+    </div>
+    <script>
+        // Retrieve the search query from the URL
+        /*
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('query');
+
+        document.getElementById("message").innerHTML = `Displaying search results for: ${searchQuery}`
+
+        fetch(`https://www.omdbapi.com/?apikey=c1aecf62&t=${searchQuery}`)
+            .then ((response) => response.json())
+            .then ((data) => {
+                console.log(data)
+                document.getElementById("Poster").src = data.Poster
+                document.getElementById("Title").innerHTML = data.Title
+
+                document.getElementById("Poster").addEventListener("click", function() {
+                    window.location.href = `info page.html?title=${data.Title}`;
+                });
+            })
+        */
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputElement = document.getElementById('SearchMovie');
+
+            inputElement.addEventListener('keydown', function (event) {
+            // Check if the pressed key is Enter (key code 13)
+                if (event.key === 'Enter') {
+                    buttonClicked();
+                }
+            });
+        });
+
+        function buttonClicked(){
+            var imdbid = document.getElementById("SearchMovie").value;
+            fetch(`https://www.omdbapi.com/?apikey=c1aecf62&t=${imdbid}`)
+            .then ((response) => response.json())
+            .then ((data) => {
+                console.log(data)
+                document.getElementById("Poster").src = data.Poster
+            })
+            window.location.href = `search-results.html?query=${encodeURIComponent(imdbid)}`;
+        }
+        
+        var urlParams = new URLSearchParams(window.location.search);
+        var search = urlParams.get('query')
+
+        document.getElementById('SearchMovie').innerHTML = `Search Result for ${search}: `
+
+        fetch(`https://www.omdbapi.com/?apikey=c1aecf62&s=${search}`)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data)
+            displayResults(data.Search);
+        })
+        .catch((error) => {
+            console.error('Error fetching search results:', error);
+        });
+
+        function displayResults(results) {
+            var resultsContainer = document.getElementById('Title');
+            resultsContainer.innerHTML = '';
+
+            if (results && results.length > 0) {
+                results.forEach(result => {
+                    var resultElement = document.createElement('div');
+                    resultElement.innerHTML = `
+                        <div class="top-picks">
+                            <a href="info page.html?movieId=${result.imdbID}">
+                                <img src="${result.Poster}" alt="${result.Title} Poster">
+                            </a>
+                            <div class="shows">
+                                <p>${result.Title}</p>
+                                <p>${result.Year}</p>
+                            </div>
+                        </div>
+                    `;
+                    resultsContainer.appendChild(resultElement);
+                });
+            } else {
+                resultsContainer.textContent = 'No results found';
+            }
+        }
+    </script>
+</body>
+</html>
